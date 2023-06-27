@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
-		<listener class-name="com.qalegendbilling.listeners.TestListener" />
-	</listeners>
   <test thread-count="5" name="Test">
-  <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="com.qalegendbilling.testScripts.ViewUserTest"/>
+      <class name="com.qalegendbilling.automationCore.DriverFactory"/>
+      <class name="com.qalegendbilling.automationCore.Base"/>
       <class name="com.qalegendbilling.testScripts.HomeTest"/>
       <class name="com.qalegendbilling.testScripts.AddUserTest"/>
+      <class name="com.qalegendbilling.testScripts.UserTest"/>
       <class name="com.qalegendbilling.testScripts.LoginTest"/>
       <class name="com.qalegendbilling.testScripts.ResetTest"/>
     </classes>

@@ -9,7 +9,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qalegendbilling.automationCore.Base;
+import com.qalegendbilling.constants.ErrorMessages;
+import com.qalegendbilling.constants.ExtentLog;
 import com.qalegendbilling.listeners.TestListener;
 import com.qalegendbilling.pages.AddUserPage;
 import com.qalegendbilling.pages.HomePage;
@@ -27,15 +30,14 @@ public class AddUserTest extends Base{
 	UserPage user;
 	AddUserPage addUser;
 	RandomUtility random;
-	@Test
+	@Test(priority = 1,enabled =true,description = "TC_001_verifyWhetherUserAbleToAddTheNewUser",groups = {"Regression"})
 	public void TC_001_verifyWhetherUserAbleToAddTheNewUser() {
+		extentTest.get().assignCategory("Regression");
 		excel = new ExcelUtility();
 		List<ArrayList<String>> datas = ExcelUtility.excelDataReader("LoginPage");
 		String username = datas.get(1).get(0);
 		String password = datas.get(1).get(1);
 		login = new LoginPage(driver);
-		List<String> expdata = excel.getExcelAsArrayList("UserManagemntOptions");
-		System.out.println(expdata);
 		login.enterUserCredentials(username, password);
 		home = login.clickOnLoginButton();
 		home.clickOnEndTour();
@@ -61,19 +63,19 @@ public class AddUserTest extends Base{
         expectedTable_data.add(new ArrayList<String>(Arrays.asList(data)));
         List<ArrayList<String>> actualTable_data=user.getTableData();
         System.out.println(actualTable_data);
-       Assert.assertEquals(actualTable_data,expectedTable_data,"Error:Invalid data");
+       Assert.assertEquals(actualTable_data,expectedTable_data,ErrorMessages.ERROR_ADD_USER);
+       extentTest.get().log(Status.PASS,ExtentLog.ADD_USER_DETAILS);
         
 		
 	}
-	@Test
+	@Test(priority = 1,enabled =true,description = "TC_002_verifyInvalidUserSearch",groups = {"Smoke"})
 	public void TC_002_verifyInvalidUserSearch() {
+		extentTest.get().assignCategory("Smoke");
 		excel = new ExcelUtility();
 		List<ArrayList<String>> datas = ExcelUtility.excelDataReader("LoginPage");
 		String username = datas.get(1).get(0);
 		String password = datas.get(1).get(1);
 		login = new LoginPage(driver);
-		List<String> expdata = excel.getExcelAsArrayList("UserManagemntOptions");
-		System.out.println(expdata);
 		login.enterUserCredentials(username, password);
 		home = login.clickOnLoginButton();
 		home.clickOnEndTour();
@@ -85,6 +87,7 @@ public class AddUserTest extends Base{
 		System.out.println(actErrorMsg);
 		List<ArrayList<String>> userpage = ExcelUtility.excelDataReader("UserPage");
 		String expErrormsg=userpage.get(1).get(0);
-		Assert.assertEquals(actErrorMsg, expErrormsg,"Invalid error msg");
+		Assert.assertEquals(actErrorMsg, expErrormsg,ErrorMessages.ERROR_INVALID_USER_SEARCH);
+		extentTest.get().log(Status.PASS,ExtentLog.INVALID_USER_DETAILS);
 	}
 }

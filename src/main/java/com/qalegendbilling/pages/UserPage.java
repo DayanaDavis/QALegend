@@ -28,6 +28,12 @@ public class UserPage extends TestHelperUtility {
 	List<WebElement> cellElements;
 	@FindBy(xpath = "//td[@class='dataTables_empty']")
 	WebElement invalidUserErrorMsg;
+	@FindBy(xpath = "//button[@class='btn btn-xs btn-danger delete_user_button']")
+	WebElement deleteUser;
+	@FindBy(xpath = "//button[@class='swal-button swal-button--confirm swal-button--danger']")
+	WebElement areyouSureDelete;
+	@FindBy(xpath = "//a[@class='btn btn-xs btn-info']")
+	WebElement viewButton;
 
 	public AddUserPage clickOnAddUser() {
 		page.clickOnElement(addUser);
@@ -47,5 +53,17 @@ public class UserPage extends TestHelperUtility {
         String msg=page.getMessage(invalidUserErrorMsg);
         return msg;
     }
+	public void clickOnDeleteButton() {
+		wait.waitUntilVisibilityOfElement(10, driver, deleteUser);
+		page.clickOnElement(deleteUser);
+	}
+	public void clickOnAreYouSureDeleteMSg() {
+		wait.waitUntilVisibilityOfElement(10, driver, areyouSureDelete);
+		page.clickOnElement(areyouSureDelete);
+	}
+	public ViewUserPage clickOnViewButton() {
+		page.clickOnElement(viewButton);
+		return new ViewUserPage(driver);
+	}
 
 }

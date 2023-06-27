@@ -19,8 +19,6 @@ public class DriverFactory {
 
 	public static WebDriver testInitialization(String browser){
 	    if(browser.equals("chrome")){
-	       // ChromeOptions ops=new ChromeOptions();
-	       // ops.addArguments("--remote-allow-origins=*");
 	        tlDriver.set(new ChromeDriver());
 	    }else if(browser.equals("FireFox")){
 	        tlDriver.set(new FirefoxDriver());

@@ -7,7 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qalegendbilling.automationCore.Base;
+import com.qalegendbilling.constants.ErrorMessages;
+import com.qalegendbilling.constants.ExtentLog;
 import com.qalegendbilling.listeners.TestListener;
 import com.qalegendbilling.pages.HomePage;
 import com.qalegendbilling.pages.LoginPage;
@@ -34,11 +37,13 @@ public class HomeTest extends Base {
 		home.clickOnAccountHolder();
 		login = home.clickOnSignOut();
 		String acttitile = login.getLoginPageTitle();
-		Assert.assertEquals(acttitile, expTitle, "Invalid title");
+		Assert.assertEquals(acttitile, expTitle, ErrorMessages.ERROR_USER_SIGNOUT);
+		extentTest.get().log(Status.PASS, ExtentLog.USER_SIGNOUT_DETAILS);
 	}
 
-	@Test
+	@Test(priority = 1, enabled = true, description = "TC_002_verifyUserManagementSubTabs", groups = {"Smoke"})
 	public void TC_002_verifyUserManagementSubTabs() {
+		extentTest.get().assignCategory("Smoke");
 		excel = new ExcelUtility();
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 		String username = data.get(1).get(0);
@@ -52,7 +57,8 @@ public class HomeTest extends Base {
 		home.clickOnUserManagement();
 		List<String> actdata = home.getUserMgntOptions();
 		System.out.println(actdata);
-		Assert.assertEquals(actdata, expdata, "Invalid userManagement Options");
+		Assert.assertEquals(actdata, expdata, ErrorMessages.ERROR_USERMGMTSUBTAB);
+		extentTest.get().log(Status.PASS, ExtentLog.USER_MNGT_SUBTABS);
 	}
 
 }

@@ -39,20 +39,13 @@ public class Base {
             e.printStackTrace();
         }
     }
-//    @BeforeMethod(alwaysRun = true)
-//    @Parameters({"browser"})
-//    public void setUP(String browserName){
-////        String browser= prop.getProperty("browser");
-//        String url= prop.getProperty("url");
-//        driver = DriverFactory.testInitialization(browserName);
-//        driver.get(url);
-//    }
+
 
     @BeforeMethod(alwaysRun = true)
    @Parameters({"browser"})
-    public void setUP(String browserName){
+    public void setUP(String browsername){
         String url= prop.getProperty("url");
-        driver = DriverFactory.testInitialization(browserName);
+        driver = DriverFactory.testInitialization(browsername);
         driver.get(url);
     }
     @AfterMethod(alwaysRun = true)

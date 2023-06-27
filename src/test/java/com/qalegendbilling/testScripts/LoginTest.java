@@ -7,8 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
-
+import com.aventstack.extentreports.Status;
 import com.qalegendbilling.automationCore.Base;
+import com.qalegendbilling.constants.ErrorMessages;
+import com.qalegendbilling.constants.ExtentLog;
 import com.qalegendbilling.listeners.TestListener;
 import com.qalegendbilling.pages.HomePage;
 import com.qalegendbilling.pages.LoginPage;
@@ -20,8 +22,9 @@ public class LoginTest extends Base{
 	LoginPage login;
 	HomePage home;
 	RandomUtility random;
-@Test
+@Test(priority = 1,enabled =true,description = "TC_001_verifyUserLoginsWithValidCredentials",groups = {"Regression"})
 public void TC_001_verifyUserLoginsWithValidCredentials() {
+	extentTest.get().assignCategory("Regression");
 	List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
 	String username=data.get(1).get(0);
 	String password=data.get(1).get(1);
@@ -31,10 +34,12 @@ public void TC_001_verifyUserLoginsWithValidCredentials() {
 	home=login.clickOnLoginButton();
 	home.clickOnEndTour();
 	String actUsername=home.getAccountHolderName();
-	Assert.assertEquals(actUsername,expUsername,"Invalid login");
+	Assert.assertEquals(actUsername,expUsername,ErrorMessages.ERROR_VALID_LOGIN);
+	extentTest.get().log(Status.PASS, ExtentLog.USER_VALID_LOGIN);
 }
-@Test
+@Test(priority = 1,enabled =true,description = "TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials",groups = {"Regression"})
 public void TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials() {
+	extentTest.get().assignCategory("Regression");
 	ExcelUtility excel=new ExcelUtility();
 	List<ArrayList<String>> data=excel.excelDataReader("LoginPage");
 	String expErrormsg=data.get(1).get(3);
@@ -45,6 +50,7 @@ public void TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials() {
 	login.enterUserCredentials(email, password);
 	login.clickOnLoginButton();
 	String actmsg=login.getErrorMessage();
-	Assert.assertEquals(actmsg, expErrormsg,"Invalid msg");
+	Assert.assertEquals(actmsg, expErrormsg,ErrorMessages.ERRO_MSG_INVALID_CREDENTIAL);
+	extentTest.get().log(Status.PASS, ExtentLog.USER_INVALID_LOGIN);
 }
 }

@@ -1,81 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="10" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-24T05:02:37 GST" name="Suite" finished-at="2023-06-24T05:04:52 GST" duration-ms="135305">
+  <suite started-at="2023-06-24T05:25:41 GST" name="Jenkins Suite" finished-at="2023-06-24T05:26:20 GST" duration-ms="38943">
     <groups>
       <group name="Regression">
-        <method signature="HomeTest.TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" name="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" class="com.qalegendbilling.testScripts.HomeTest"/>
+        <method signature="HomeTest.TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" name="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" class="com.qalegendbilling.testScripts.HomeTest"/>
       </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="HomeTest.TC_002_verifyUserManagementSubTabs()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" name="TC_002_verifyUserManagementSubTabs" class="com.qalegendbilling.testScripts.HomeTest"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-06-24T05:02:37 GST" name="Test" finished-at="2023-06-24T05:04:52 GST" duration-ms="135305">
-      <class name="com.qalegendbilling.testScripts.LoginTest">
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:04 GST" name="setUP" finished-at="2023-06-24T05:04:16 GST" duration-ms="12068" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC_001_verifyUserLoginsWithValidCredentials()[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:16 GST" name="TC_001_verifyUserLoginsWithValidCredentials" finished-at="2023-06-24T05:04:21 GST" duration-ms="5383" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001_verifyUserLoginsWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:21 GST" name="tearDown" finished-at="2023-06-24T05:04:22 GST" duration-ms="657" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_001_verifyUserLoginsWithValidCredentials status=SUCCESS method=LoginTest.TC_001_verifyUserLoginsWithValidCredentials()[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:22 GST" name="setUP" finished-at="2023-06-24T05:04:33 GST" duration-ms="11409" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials()[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:33 GST" name="TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials" finished-at="2023-06-24T05:04:35 GST" duration-ms="1063" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382]" started-at="2023-06-24T05:04:35 GST" name="tearDown" finished-at="2023-06-24T05:04:35 GST" duration-ms="709" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials status=SUCCESS method=LoginTest.TC_002_verifyTheErrorMessageDisplayedForInvalidCredentials()[pri:0, instance:com.qalegendbilling.testScripts.LoginTest@50313382] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegendbilling.testScripts.LoginTest -->
+    <test started-at="2023-06-24T05:25:41 GST" name="Test" finished-at="2023-06-24T05:26:20 GST" duration-ms="38943">
       <class name="com.qalegendbilling.testScripts.HomeTest">
-        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:02:37 GST" name="setExtent" finished-at="2023-06-24T05:02:37 GST" duration-ms="19" status="PASS">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:25:41 GST" name="setExtent" finished-at="2023-06-24T05:25:41 GST" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@17b3b021]]>
+                <![CDATA[org.testng.TestRunner@5b8572df]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:02:37 GST" name="setUP" finished-at="2023-06-24T05:02:46 GST" duration-ms="9254" status="PASS">
+        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:25:41 GST" name="setUP" finished-at="2023-06-24T05:25:53 GST" duration-ms="11756" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,22 +35,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC_002_verifyUserManagementSubTabs()[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:02:46 GST" name="TC_002_verifyUserManagementSubTabs" finished-at="2023-06-24T05:02:53 GST" duration-ms="6713" status="PASS">
+        <test-method signature="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:25:53 GST" name="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" description="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" finished-at="2023-06-24T05:26:00 GST" duration-ms="7211" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_002_verifyUserManagementSubTabs -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:02:53 GST" name="tearDown" finished-at="2023-06-24T05:02:53 GST" duration-ms="654" status="PASS">
+        </test-method> <!-- TC_001_verifyWhetherUserAbleToSignoutFromTheApplication -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:26:00 GST" name="tearDown" finished-at="2023-06-24T05:26:01 GST" duration-ms="657" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_002_verifyUserManagementSubTabs status=SUCCESS method=HomeTest.TC_002_verifyUserManagementSubTabs()[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a] output={null}]]]>
+                <![CDATA[[TestResult name=TC_001_verifyWhetherUserAbleToSignoutFromTheApplication status=SUCCESS method=HomeTest.TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:02:53 GST" name="setUP" finished-at="2023-06-24T05:03:04 GST" duration-ms="11034" status="PASS">
+        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:26:01 GST" name="setUP" finished-at="2023-06-24T05:26:13 GST" duration-ms="11997" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -112,15 +61,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:03:04 GST" name="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" description="TC_001_verifyWhetherUserAbleToSignoutFromTheApplication" finished-at="2023-06-24T05:03:09 GST" duration-ms="5037" status="PASS">
+        <test-method signature="TC_002_verifyUserManagementSubTabs()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:26:13 GST" name="TC_002_verifyUserManagementSubTabs" description="TC_002_verifyUserManagementSubTabs" finished-at="2023-06-24T05:26:19 GST" duration-ms="6603" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001_verifyWhetherUserAbleToSignoutFromTheApplication -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a]" started-at="2023-06-24T05:03:09 GST" name="tearDown" finished-at="2023-06-24T05:03:10 GST" duration-ms="645" status="PASS">
+        </test-method> <!-- TC_002_verifyUserManagementSubTabs -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.HomeTest@f627d13]" started-at="2023-06-24T05:26:19 GST" name="tearDown" finished-at="2023-06-24T05:26:20 GST" duration-ms="670" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_001_verifyWhetherUserAbleToSignoutFromTheApplication status=SUCCESS method=HomeTest.TC_001_verifyWhetherUserAbleToSignoutFromTheApplication()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@4dd6fd0a] output={null}]]]>
+                <![CDATA[[TestResult name=TC_002_verifyUserManagementSubTabs status=SUCCESS method=HomeTest.TC_002_verifyUserManagementSubTabs()[pri:1, instance:com.qalegendbilling.testScripts.HomeTest@f627d13] output={null}]]]>
               </value>
             </param>
           </params>
@@ -128,88 +77,6 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qalegendbilling.testScripts.HomeTest -->
-      <class name="com.qalegendbilling.testScripts.AddUserTest">
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:03:10 GST" name="setUP" finished-at="2023-06-24T05:03:18 GST" duration-ms="8299" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC_001_verifyWhetherUserAbleToAddTheNewUser()[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:03:18 GST" name="TC_001_verifyWhetherUserAbleToAddTheNewUser" finished-at="2023-06-24T05:03:36 GST" duration-ms="17414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001_verifyWhetherUserAbleToAddTheNewUser -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:03:36 GST" name="tearDown" finished-at="2023-06-24T05:03:36 GST" duration-ms="679" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_001_verifyWhetherUserAbleToAddTheNewUser status=SUCCESS method=AddUserTest.TC_001_verifyWhetherUserAbleToAddTheNewUser()[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:03:36 GST" name="setUP" finished-at="2023-06-24T05:03:50 GST" duration-ms="13291" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC_002_verifyInvalidUserSearch()[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:03:50 GST" name="TC_002_verifyInvalidUserSearch" finished-at="2023-06-24T05:04:03 GST" duration-ms="13590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_002_verifyInvalidUserSearch -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3]" started-at="2023-06-24T05:04:03 GST" name="tearDown" finished-at="2023-06-24T05:04:04 GST" duration-ms="670" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_002_verifyInvalidUserSearch status=SUCCESS method=AddUserTest.TC_002_verifyInvalidUserSearch()[pri:0, instance:com.qalegendbilling.testScripts.AddUserTest@52815fa3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegendbilling.testScripts.AddUserTest -->
-      <class name="com.qalegendbilling.testScripts.ResetTest">
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegendbilling.testScripts.ResetTest@1cb346ea]" started-at="2023-06-24T05:04:35 GST" name="setUP" finished-at="2023-06-24T05:04:50 GST" duration-ms="14607" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC_001_verifyForgotPasswordMessageForInvalidEmail()[pri:0, instance:com.qalegendbilling.testScripts.ResetTest@1cb346ea]" started-at="2023-06-24T05:04:50 GST" name="TC_001_verifyForgotPasswordMessageForInvalidEmail" finished-at="2023-06-24T05:04:51 GST" duration-ms="1425" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001_verifyForgotPasswordMessageForInvalidEmail -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testScripts.ResetTest@1cb346ea]" started-at="2023-06-24T05:04:51 GST" name="tearDown" finished-at="2023-06-24T05:04:52 GST" duration-ms="660" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_001_verifyForgotPasswordMessageForInvalidEmail status=SUCCESS method=ResetTest.TC_001_verifyForgotPasswordMessageForInvalidEmail()[pri:0, instance:com.qalegendbilling.testScripts.ResetTest@1cb346ea] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegendbilling.testScripts.ResetTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Jenkins Suite -->
 </testng-results>
